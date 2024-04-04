@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<WebApp.Models.SanPham>
+<h2>Products</h2>
+
+@if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+{
+    <a asp-action="Add" class="mt-2 btn btn-primary">Create new product</a>
+}
+@{
+    SelectList categories = ViewBag.Categories;
+    int numOfQuantity = 1;
+}
+<table class="table mt-2 table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>CongDung</th>
+            <th>ThanhPhanDinhDuong</th>
+            <th>Hdsd</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody class="table-primary">
+        @foreach (var product in Model)
+        {
+            <tr>
+                
+                <td>@product.SpName</td>
+                <td>@product.Price</td>
+                <td>@product.MoTa</td>
+                <td>@product.CongDung</td>
+                <td>@product.ThanhPhanDinhDuong</td>
+                <td>@product.Hdsd</td>
+                <td>
+                    @{
+                        string? categoryName = categories
+                        .Cast<SelectListItem>()
+                        .Where(item => item.Value == product.Idcategory)
+                        .Select(item => item.Text)
+                        .FirstOrDefault();
+                    }
+                    @categoryName
+                </td>
+                <td>
+                    @if (product.HinhAnhSp is not null)
+                {
+                    <img src="data:image/*;base64,@(Convert.ToBase64String(product.HinhAnhSp))" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
+                }
+                </td>
+                <td>
+                    <a asp-action="Display" asp-route-id="@product.Idsp" class="btn btn-success m-1">Detail</a>
+                    @if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+                    {
+                        <a asp-action="Update" asp-route-id="@product.Idsp" class="btn btn-warning m-1">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@product.Idsp" class="btn btn-danger m-1">Delete</a>
+                    }
+                    @if ((await AuthorizationService.AuthorizeAsync(User, "RequireMember")).Succeeded)
+                    {
+                        <a asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-productId="@product.Idsp" asp-route-quantity="@numOfQuantity" class="btn btn-primary m-1">Add to ShoppingCart</a>
+                    }
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    
+}

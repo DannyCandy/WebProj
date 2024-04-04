@@ -354,6 +354,8 @@ namespace WebApp.Migrations
 
                     b.HasIndex("Idsp");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("OrderDetail", (string)null);
                 });
 
@@ -396,9 +398,16 @@ namespace WebApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,4)");
+
                     b.Property<int>("SoLuongSp")
                         .HasColumnType("int")
                         .HasColumnName("SoLuongSP");
+
+                    b.Property<string>("SpName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ThanhPhanDinhDuong")
                         .IsRequired()
@@ -436,6 +445,8 @@ namespace WebApp.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Idttlh");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ThongTinLienHe", (string)null);
                 });
@@ -499,7 +510,15 @@ namespace WebApp.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_Tb.OrderDetail_Tb.SanPham");
 
+                    b.HasOne("WebApp.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("IdspNavigation");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("WebApp.Models.SanPham", b =>
@@ -527,6 +546,17 @@ namespace WebApp.Migrations
                     b.Navigation("IdchungNhanNavigation");
 
                     b.Navigation("IdnppNavigation");
+                });
+
+            modelBuilder.Entity("WebApp.Models.ThongTinLienHe", b =>
+                {
+                    b.HasOne("WebApp.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("WebApp.Models.Category", b =>

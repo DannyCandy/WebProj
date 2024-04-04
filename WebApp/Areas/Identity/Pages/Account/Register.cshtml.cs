@@ -158,7 +158,8 @@ namespace WebApp.Areas.Identity.Pages.Account
                         await Input.Avatar.CopyToAsync(dataStream);
                         user.Avatar = dataStream.ToArray(); 
                     }
-                }/*
+                }
+                /*
                 user.Avatar = await GetByteArrayFromImage(image);*/
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
@@ -215,7 +216,7 @@ namespace WebApp.Areas.Identity.Pages.Account
         }
 
         //Hàm xử lý ảnh thành byte[]
-        private static async Task<byte[]> GetByteArrayFromImage(IFormFile image)
+        /*private static async Task<byte[]> GetByteArrayFromImage(IFormFile image)
         {
             if (image is not null && image.Length > 0)
             {
@@ -226,7 +227,7 @@ namespace WebApp.Areas.Identity.Pages.Account
                 }
             }
             return null;
-        }
+        }*/
 
         private ApplicationUser CreateUser()
         {

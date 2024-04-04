@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Models;
 using WebApp.Data;
+using WebApp.Repositories;
 
 namespace WebApp
 {
@@ -20,6 +21,23 @@ namespace WebApp
                                 .AddEntityFrameworkStores<AgriculturalProductsContext>()
                                 .AddDefaultUI()
                                 .AddDefaultTokenProviders();
+
+            builder.Services.AddRazorPages();
+
+            // Bổ sung role để tùy chỉnh giao diện
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireAdmin", policy => policy.RequireRole("Admin"));
+            });
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireMember", policy => policy.RequireRole("Member"));
+            });
+
+
+            builder.Services.AddScoped<ISanPhamRepository, EFProductRepository>();
+            builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews()
                 .AddJsonOptions(o =>
@@ -27,7 +45,7 @@ namespace WebApp
                     o.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
                     o.JsonSerializerOptions.PropertyNamingPolicy = null;
                 });
-
+                
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -49,9 +67,19 @@ namespace WebApp
 
             app.UseAuthorization();
 
+            //Route to Admin page
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                  name: "areas",
+                  pattern: "{area:exists}/{controller=DashBoard}/{action=Index}/{id?}"
+                );
+            });
+
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
             //Khoi tao role
             using (var scope = app.Services.CreateScope())

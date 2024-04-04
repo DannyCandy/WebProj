@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApp.Models
 {
@@ -20,6 +21,10 @@ namespace WebApp.Models
         public string IdchungNhan { get; set; } = null!;
         public string Idcategory { get; set; } = null!;
         public string Idnpp { get; set; } = null!;
+
+        public string SpName { get; set; } = null!;
+        [Column(TypeName = "decimal(18,4)")]
+        public decimal Price { get; set; }
 
         public virtual Category IdcategoryNavigation { get; set; } = null!;
         public virtual ChungNhan IdchungNhanNavigation { get; set; } = null!;

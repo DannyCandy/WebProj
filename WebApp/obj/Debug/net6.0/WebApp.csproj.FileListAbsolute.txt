@@ -283,3 +283,4 @@ D:\TempProj\WebApp\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.
 D:\TempProj\WebApp\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 D:\TempProj\WebApp\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 D:\TempProj\WebApp\obj\Debug\net6.0\WebApp.MvcApplicationPartsAssemblyInfo.cs
+D:\TempProj\WebApp\obj\Debug\net6.0\WebApp.sourcelink.json
