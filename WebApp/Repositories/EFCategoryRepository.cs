@@ -18,7 +18,7 @@ namespace WebApp.Repositories
             return await _context.Categories.ToListAsync();
         }
 
-        public async Task<Category> GetByIdAsync(int id)
+        public async Task<Category> GetByIdAsync(string id)
         {
             return await _context.Categories.FindAsync(id);
         }
@@ -35,7 +35,7 @@ namespace WebApp.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(string id)
         {
             var category = await _context.Categories.FindAsync(id);
             _context.Categories.Remove(category);

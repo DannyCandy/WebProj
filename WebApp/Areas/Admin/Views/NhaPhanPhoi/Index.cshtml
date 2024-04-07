@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<WebApp.Models.NhaPhanPhoi>
+<h2>Vendors</h2>
+
+@if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+{
+    <a asp-action="Add" class="mt-2 btn btn-primary">Create new vendor</a>
+}
+
+<table class="table mt-2 table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>GioMoCua</th>
+            <th>GioDongCua</th>
+            <th>HinhAnh</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody class="table-primary">
+        @foreach (var vendor in Model)
+        {
+            
+            // Lấy giá trị TimeSpan từ mô hình
+            TimeSpan timeSpanValueGioMoCua = vendor.GioMoCua;
+            TimeSpan timeSpanValueGioDongCua = vendor.GioDongCua;
+
+            // Chuyển đổi TimeSpan thành chuỗi "hh:mm"
+            string timeStringGioMoCua = timeSpanValueGioMoCua.ToString(@"hh\:mm");
+            string timeStringGioDongCua = timeSpanValueGioDongCua.ToString(@"hh\:mm");
+
+            <tr>
+                <td>@vendor.TenNpp</td>
+                <td>@vendor.DiaChiNpp</td>
+                <td>@vendor.PhoneNpp</td>
+                <td>@timeStringGioMoCua</td>
+                <td>@timeStringGioDongCua</td>
+                <td>
+                    @if (vendor.HinhAnhNPP is not null)
+                    {
+                        <img src="@vendor.HinhAnhNPP" alt="Product Image" class="img-thumbnail border border-success mt-2" style="width: 200px" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Display" asp-route-id="@vendor.Idnpp" class="btn btn-success m-1">Detail</a>
+                    @if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+                    {
+                        <a asp-action="Update" asp-route-id="@vendor.Idnpp" class="btn btn-warning m-1">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@vendor.Idnpp" class="btn btn-danger m-1">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+}

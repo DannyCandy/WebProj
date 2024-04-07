@@ -46,7 +46,7 @@
         <input id="inputImg" type="file" asp-for="HinhAnhSp" class="form-control" />
         @if (Model.HinhAnhSp is not null)
         {
-            <img id="imgViewer" src="data:image/*;base64,@(Convert.ToBase64String(Model.HinhAnhSp))" alt="Product Image" style="max-width: 200px;" />
+            <img id="imgViewer" src="@Model.HinhAnhSp" alt="Product Image" style="max-width: 200px;" />
         }
         else
         {

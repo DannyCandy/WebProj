@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<WebApp.Models.Category>
+
+<h2>Categories</h2>
+@if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+{
+    <a asp-action="Add" class="mt-2 btn btn-primary">Create new category</a>
+}
+<table class="table mt-2 table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody class="table-primary">
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.NameCategory</td>          
+                <td>
+                    <a asp-action="Display" asp-route-id="@product.Idcategory" class="btn btn-success mt-1">Detail</a>
+                    @if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+                    {
+                        <a asp-action="Update" asp-route-id="@product.Idcategory" class="btn btn-warning mt-1">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@product.Idcategory" class="btn btn-danger mt-1">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        var defaultLink = document.getElementById("selection");
+        defaultLink.classList.remove("start-home");
+        defaultLink.classList.add("start-add");
+    </script>
+}

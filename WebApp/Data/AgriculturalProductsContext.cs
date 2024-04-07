@@ -65,6 +65,9 @@ namespace WebApp.Data
 
                 entity.Property(e => e.Idnpp).HasColumnName("IDNPP");
 
+                //Thêm mới
+                entity.Property(e => e.HinhAnhNPP).HasColumnName("HinhAnhNPP");
+
                 entity.Property(e => e.DiaChiNpp).HasColumnName("DiaChiNPP");
 
                 entity.Property(e => e.GioDongCua).HasColumnType("time(0)");

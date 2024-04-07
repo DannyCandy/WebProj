@@ -22,6 +22,9 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\images\ChungNhanImg\" />
+    <Folder Include="wwwroot\images\NppImg\" />
+    <Folder Include="wwwroot\images\ProductImg\" />
   </ItemGroup>
 
 </Project>

@@ -35,16 +35,13 @@ namespace WebApp
             });
 
 
-            builder.Services.AddScoped<ISanPhamRepository, EFProductRepository>();
+            builder.Services.AddScoped<ISanPhamRepository, EFSanPhamRepository>();
             builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
+            builder.Services.AddScoped<INhaPhanPhoiRepository, EFNhaPhanPhoiRepository>();
+            builder.Services.AddScoped<IChungNhanRepository, EFChungNhanRepository>();
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews()
-                .AddJsonOptions(o =>
-                {
-                    o.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
-                    o.JsonSerializerOptions.PropertyNamingPolicy = null;
-                });
+            builder.Services.AddControllersWithViews();
                 
             var app = builder.Build();
 
@@ -72,7 +69,7 @@ namespace WebApp
             {
                 endpoints.MapControllerRoute(
                   name: "areas",
-                  pattern: "{area:exists}/{controller=DashBoard}/{action=Index}/{id?}"
+                  pattern: "{area:exists}/{controller=Product}/{action=Index}/{id?}"
                 );
             });
 

@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model WebApp.Models.ChungNhan
+<h2>ChungNhan Details</h2>
+ 
+<div>
+    <h4 class="mt-2">Mota: @Model.MoTa</h4>
+    <h4 class="mt-2">HinhAnh</h4>
+
+    @if (Model.HinhAnhChungNhan is not null)
+    {
+        <img src="@Model.HinhAnhChungNhan" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
+    }
+</div>
+<a asp-action="Index" class="btn btn-success mt-2">Back to List</a>
+@if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+{
+    <a asp-action="Update" asp-route-id="@Model.IdchungNhan" class="btn btn-warning mt-2">Edit</a>
+}
+@section Scripts {
+}

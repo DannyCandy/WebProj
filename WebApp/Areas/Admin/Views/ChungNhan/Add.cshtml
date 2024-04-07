@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model WebApp.Models.ChungNhan
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Add ChungNhan";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-area="Admin" asp-controller="ChungNhan" asp-action="Add" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="MoTa"></label>
+        <textarea asp-for="MoTa" class="form-control"></textarea>
+        <span asp-validation-for="MoTa" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HinhAnhChungNhan">ChungNhan Image</label>
+        <input id="inputImg" type="file" asp-for="HinhAnhChungNhan" class="form-control" />
+        <span asp-validation-for="HinhAnhChungNhan" class="text-danger"></span> <!-- Phản hồi lỗi cho trường ImageUrl -->
+    </div>
+    <div class="mt-2 mb-2">
+        <img id="imgViewer" class="img-thumbnail" alt="Product Image" src="~/images/0d64989794b1a4c9d89bff571d3d5842.jpg" style="max-width: 200px;" />
+    </div>
+    <button id="btnSave" type="submit" class="btn btn-primary">Add</button>
+</form>
+
+@section Scripts{
+    <script>
+        document.getElementById("inputImg").addEventListener("change", function (e) {
+            var files = e.target.files;
+            document.getElementById("imgViewer").src = window.URL.createObjectURL(files[0]);
+        });
+        /*document.getElementById("btnSave").addEventListener("click", function (e) ){
+            var files = Document.getElementById("inputImg").files;
+            var formData = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                formData.append("image", files[i]);
+            }
+        }*/
+    </script> 
+   }

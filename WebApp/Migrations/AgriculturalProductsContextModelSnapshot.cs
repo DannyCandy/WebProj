@@ -255,9 +255,8 @@ namespace WebApp.Migrations
                         .HasColumnType("nvarchar(450)")
                         .HasColumnName("IDChungNhan");
 
-                    b.Property<byte[]>("HinhAnhChungNhan")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("HinhAnhChungNhan")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MoTa")
                         .IsRequired()
@@ -284,6 +283,10 @@ namespace WebApp.Migrations
 
                     b.Property<TimeSpan>("GioMoCua")
                         .HasColumnType("time(0)");
+
+                    b.Property<string>("HinhAnhNPP")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("HinhAnhNPP");
 
                     b.Property<string>("PhoneNpp")
                         .IsRequired()
@@ -374,9 +377,9 @@ namespace WebApp.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("HDSD");
 
-                    b.Property<byte[]>("HinhAnhSp")
+                    b.Property<string>("HinhAnhSp")
                         .IsRequired()
-                        .HasColumnType("varbinary(max)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("HinhAnhSP");
 
                     b.Property<string>("Idcategory")

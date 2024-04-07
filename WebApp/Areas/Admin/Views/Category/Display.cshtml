@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model WebApp.Models.Category
+
+<h2>Category Details</h2>
+
+<div>
+    <h4 class="mt-2">Id: @Model.Idcategory</h4>
+    <h4 class="mt-2">Name: @Model.NameCategory</h4>
+</div>
+
+<a asp-action="Index" class="btn btn-success mt-2">Back to List</a>
+<a asp-action="Update" asp-route-id="@Model.Idcategory" class="btn btn-warning mt-2">Edit</a>
+@section Scripts {
+}

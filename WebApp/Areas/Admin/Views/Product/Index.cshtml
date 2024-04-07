@@ -10,7 +10,6 @@
 }
 @{
     SelectList categories = ViewBag.Categories;
-    int numOfQuantity = 1;
 }
 <table class="table mt-2 table-hover">
     <thead class="table-dark">
@@ -49,9 +48,9 @@
                 </td>
                 <td>
                     @if (product.HinhAnhSp is not null)
-                {
-                    <img src="data:image/*;base64,@(Convert.ToBase64String(product.HinhAnhSp))" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
-                }
+                    {
+                        <img src="@product.HinhAnhSp" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
+                    }
                 </td>
                 <td>
                     <a asp-action="Display" asp-route-id="@product.Idsp" class="btn btn-success m-1">Detail</a>
@@ -60,11 +59,6 @@
                         <a asp-action="Update" asp-route-id="@product.Idsp" class="btn btn-warning m-1">Edit</a>
                         <a asp-action="Delete" asp-route-id="@product.Idsp" class="btn btn-danger m-1">Delete</a>
                     }
-                    @if ((await AuthorizationService.AuthorizeAsync(User, "RequireMember")).Succeeded)
-                    {
-                        <a asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-productId="@product.Idsp" asp-route-quantity="@numOfQuantity" class="btn btn-primary m-1">Add to ShoppingCart</a>
-                    }
-                    
                 </td>
             </tr>
         }

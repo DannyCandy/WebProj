@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model WebApp.Models.NhaPhanPhoi
+@{
+    // Lấy giá trị TimeSpan từ mô hình
+    TimeSpan timeSpanValueGioMoCua = @Model.GioMoCua;
+    TimeSpan timeSpanValueGioDongCua = @Model.GioDongCua;
+
+    // Chuyển đổi TimeSpan thành chuỗi "hh:mm"
+    string timeStringGioMoCua = timeSpanValueGioMoCua.ToString(@"hh\:mm");
+    string timeStringGioDongCua = timeSpanValueGioDongCua.ToString(@"hh\:mm");
+}
+<h2>Are you sure you want to delete this?</h2>
+
+    <div>
+        <h4 class="mt-2">Name: @Model.TenNpp</h4>
+        <h4 class="mt-2">Address: @Model.DiaChiNpp</h4>
+        <h4 class="mt-2">Phone: @Model.PhoneNpp</h4>
+        <h4 class="mt-2">GioMoCua: @timeStringGioMoCua</h4>
+        <h4 class="mt-2">GioDongCua: @timeStringGioDongCua</h4>
+        <h4 class="mt-2">HinhAnh</h4>
+
+        @if (Model.HinhAnhNPP is not null)
+        {
+            <img src="@Model.HinhAnhNPP" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
+        }
+    </div>
+
+    <form asp-action="Delete" method="post" class="mt-2">
+        <input type="hidden" asp-for="Idnpp" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-success">Cancel</a>
+    </form>
+@section Scripts {
+}

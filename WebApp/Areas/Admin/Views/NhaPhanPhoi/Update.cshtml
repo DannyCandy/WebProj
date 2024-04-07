@@ -1,0 +1,54 @@
+﻿@model WebApp.Models.NhaPhanPhoi
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Edit Vendor";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Idnpp" />
+    <div class="form-group">
+        <label asp-for="TenNpp"></label>
+        <input asp-for="TenNpp" class="form-control" />
+        <span asp-validation-for="TenNpp" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DiaChiNpp"></label>
+        <textarea asp-for="DiaChiNpp" class="form-control"></textarea>
+        <span asp-validation-for="DiaChiNpp" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNpp"></label>
+        <input type="number" asp-for="PhoneNpp" class="form-control" />
+        <span asp-validation-for="PhoneNpp" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="GioMoCua"></label>
+        <input type="time" asp-for="GioMoCua" class="form-control" />
+        <span asp-validation-for="GioMoCua" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="GioDongCua"></label>
+        <input type="time" asp-for="GioDongCua" class="form-control" />
+        <span asp-validation-for="GioDongCua" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HinhAnhNPP">Vendor Image</label>
+        <input id="inputImg" type="file" asp-for="HinhAnhNPP" class="form-control" />
+        <span asp-validation-for="HinhAnhNPP" class="text-danger"></span> <!-- Phản hồi lỗi cho trường ImageUrl -->
+    </div>
+    <div class="mt-2 mb-2">
+        <img id="imgViewer" class="img-thumbnail" alt="Product Image" src="~/images/0d64989794b1a4c9d89bff571d3d5842.jpg" style="max-width: 200px;" />
+    </div>
+    <button type="submit" class="btn btn-primary m-1">Update</button>
+    <a asp-action="Index" class="btn btn-success m-1">Cancel</a>
+</form>
+@section Scripts {
+    <script>
+        document.getElementById("inputImg").addEventListener("change", function (e) {
+            var files = e.target.files;
+            document.getElementById("imgViewer").src = window.URL.createObjectURL(files[0]);
+        });
+    </script>
+}

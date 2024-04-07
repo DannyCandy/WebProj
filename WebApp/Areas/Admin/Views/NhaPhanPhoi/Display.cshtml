@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model WebApp.Models.NhaPhanPhoi
+@{
+    // Lấy giá trị TimeSpan từ mô hình
+    TimeSpan timeSpanValueGioMoCua = @Model.GioMoCua;
+    TimeSpan timeSpanValueGioDongCua = @Model.GioDongCua;
+
+    // Chuyển đổi TimeSpan thành chuỗi "hh:mm"
+    string timeStringGioMoCua = timeSpanValueGioMoCua.ToString(@"hh\:mm");
+    string timeStringGioDongCua = timeSpanValueGioDongCua.ToString(@"hh\:mm");
+}
+<h2>Vendor Details</h2>
+ 
+<div>
+    <h4 class="mt-2">Name: @Model.TenNpp</h4>
+    <h4 class="mt-2">Address: @Model.DiaChiNpp</h4>
+    <h4 class="mt-2">Phone: @Model.PhoneNpp</h4>
+    <h4 class="mt-2">GioMoCua: @timeStringGioMoCua</h4>
+    <h4 class="mt-2">GioDongCua: @timeStringGioDongCua</h4>
+    <h4 class="mt-2">HinhAnh</h4>
+
+    @if (Model.HinhAnhNPP is not null)
+    {
+        <img src="@Model.HinhAnhNPP" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
+    }
+</div>
+<a asp-action="Index" class="btn btn-success mt-2">Back to List</a>
+@if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+{
+    <a asp-action="Update" asp-route-id="@Model.Idnpp" class="btn btn-warning mt-2">Edit</a>
+}
+@section Scripts {
+}

@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<WebApp.Models.ChungNhan>
+<h2>ChungNhans</h2>
+
+@if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+{
+    <a asp-action="Add" class="mt-2 btn btn-primary">Create new ChungNhan</a>
+}
+
+<table class="table mt-2 table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Mota</th>
+            <th>HinhAnh</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody class="table-primary">
+        @foreach (var vendor in Model)
+        {
+            <tr>
+                <td>@vendor.MoTa</td>
+                <td>
+                    @if (vendor.HinhAnhChungNhan is not null)
+                    {
+                        <img src="@vendor.HinhAnhChungNhan" alt="Product Image" class="img-thumbnail border border-success mt-2" style="width: 200px" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="Display" asp-route-id="@vendor.IdchungNhan" class="btn btn-success m-1">Detail</a>
+                    @if ((await AuthorizationService.AuthorizeAsync(User, "RequireAdmin")).Succeeded)
+                    {
+                        <a asp-action="Update" asp-route-id="@vendor.IdchungNhan" class="btn btn-warning m-1">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@vendor.IdchungNhan" class="btn btn-danger m-1">Delete</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+}

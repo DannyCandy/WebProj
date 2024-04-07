@@ -4,11 +4,11 @@ using WebApp.Models;
 
 namespace WebApp.Repositories
 {
-    public class EFProductRepository : ISanPhamRepository
+    public class EFSanPhamRepository : ISanPhamRepository
     {
         private readonly AgriculturalProductsContext _context;
 
-        public EFProductRepository(AgriculturalProductsContext context)
+        public EFSanPhamRepository(AgriculturalProductsContext context)
         {
             _context = context;
         }
@@ -18,7 +18,7 @@ namespace WebApp.Repositories
             return await _context.SanPhams.ToListAsync();
         }
 
-        public async Task<SanPham> GetByIdAsync(int id)
+        public async Task<SanPham> GetByIdAsync(string id)
         {
             return await _context.SanPhams.FindAsync(id);
         }
@@ -35,7 +35,7 @@ namespace WebApp.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task DeleteAsync(string id)
         {
             var product = await _context.SanPhams.FindAsync(id);
             _context.SanPhams.Remove(product);
