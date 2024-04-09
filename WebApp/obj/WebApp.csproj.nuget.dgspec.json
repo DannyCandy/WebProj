@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TempProj\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "D:\\TempProj\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TempProj\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "D:\\TempProj\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\TempProj\\WebApp\\obj\\",
+        "projectPath": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\trxua\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Hoàng Tiến\\depresss\\Components\\Offline Packages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\trxua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "D:\\Hoàng Tiến\\depresss\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -99,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

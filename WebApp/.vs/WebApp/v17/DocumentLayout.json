@@ -1,41 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TempProj\\WebApp\\",
+  "WorkspaceRootPath": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\areas\\admin\\views\\product\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\areas\\admin\\views\\product\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:areas\\admin\\views\\product\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\areas\\admin\\controllers\\nhaphanphoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\areas\\admin\\controllers\\nhaphanphoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:areas\\admin\\controllers\\nhaphanphoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|c:\\users\\trxua\\documents\\webappnongsanvn\\webproj\\webapp\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -46,21 +46,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\TempProj\\WebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-09T14:31:38.269Z",
               "EditorCaption": ""
@@ -69,9 +81,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ScaffoldingReadMe.txt",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
-              "ToolTip": "D:\\TempProj\\WebApp\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\ScaffoldingReadMe.txt",
               "RelativeToolTip": "ScaffoldingReadMe.txt",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
@@ -81,9 +93,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "D:\\TempProj\\WebApp\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\appsettings.Development.json",
               "RelativeToolTip": "appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -93,9 +105,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\TempProj\\WebApp\\Program.cs",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -105,9 +117,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\TempProj\\WebApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAACaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -117,9 +129,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Update.cshtml",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Areas\\Admin\\Views\\Product\\Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Areas\\Admin\\Views\\Product\\Update.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Update.cshtml",
-              "ToolTip": "D:\\TempProj\\WebApp\\Areas\\Admin\\Views\\Product\\Update.cshtml",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Areas\\Admin\\Views\\Product\\Update.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Update.cshtml",
               "ViewState": "AQIAADkAAAAAAAAAAAAAADUAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -129,9 +141,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "NhaPhanPhoiController.cs",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
-              "ToolTip": "D:\\TempProj\\WebApp\\Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
               "RelativeToolTip": "Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
               "ViewState": "AQIAAGQAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -141,9 +153,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Index.cshtml",
-              "ToolTip": "D:\\TempProj\\WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
               "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Index.cshtml",
               "ViewState": "AQIAAEgAAAAAAAAAAAAAAFcAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -153,9 +165,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Areas\\Admin\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\TempProj\\WebApp\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\trxua\\Documents\\WebAppnongsanVN\\WebProj\\WebApp\\Areas\\Admin\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Areas\\Admin\\Controllers\\ProductController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAI4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
