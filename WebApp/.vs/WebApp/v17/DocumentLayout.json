@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\TempProj\\WebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\areas\\admin\\views\\product\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:areas\\admin\\views\\product\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\areas\\admin\\controllers\\nhaphanphoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:areas\\admin\\controllers\\nhaphanphoicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|d:\\tempproj\\webapp\\areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{86B04752-5B1B-4F98-9CB2-87F0B62CE186}|WebApp.csproj|solutionrelative:areas\\admin\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderDetail.cs",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Models\\OrderDetail.cs",
-              "RelativeDocumentMoniker": "Models\\OrderDetail.cs",
-              "ToolTip": "D:\\TempProj\\WebApp\\Models\\OrderDetail.cs",
-              "RelativeToolTip": "Models\\OrderDetail.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAA5wA4AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T08:59:54.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Models\\Order.cs",
-              "ToolTip": "D:\\TempProj\\WebApp\\Models\\Order.cs",
-              "RelativeToolTip": "Models\\Order.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAxwAUAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T08:58:28.711Z",
-              "EditorCaption": ""
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "D:\\TempProj\\WebApp\\Areas\\Admin\\Views\\Product\\Update.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Update.cshtml",
+              "ToolTip": "D:\\TempProj\\WebApp\\Areas\\Admin\\Views\\Product\\Update.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Update.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAADUAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-07T13:28:18.043Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SanPham.cs",
-              "DocumentMoniker": "D:\\TempProj\\WebApp\\Models\\SanPham.cs",
-              "RelativeDocumentMoniker": "Models\\SanPham.cs",
-              "ToolTip": "D:\\TempProj\\WebApp\\Models\\SanPham.cs",
-              "RelativeToolTip": "Models\\SanPham.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAwwB8AAABKAAAA",
+              "Title": "NhaPhanPhoiController.cs",
+              "DocumentMoniker": "D:\\TempProj\\WebApp\\Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
+              "ToolTip": "D:\\TempProj\\WebApp\\Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\NhaPhanPhoiController.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T08:57:28.268Z",
+              "WhenOpened": "2024-04-07T13:24:02.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\TempProj\\WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ToolTip": "D:\\TempProj\\WebApp\\Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\Product\\Index.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFcAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-07T12:23:19.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\TempProj\\WebApp\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\TempProj\\WebApp\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAkwI4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T10:58:03.069Z",
               "EditorCaption": ""
             }
           ]

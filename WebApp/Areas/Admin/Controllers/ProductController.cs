@@ -12,11 +12,15 @@ namespace WebApp.Areas.Admin.Controllers
     {
         private readonly ISanPhamRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
+        private readonly INhaPhanPhoiRepository _nhaPhanPhoiRepository;
+        private readonly IChungNhanRepository _chungNhanRepository;
 
-        public ProductController(ISanPhamRepository productRepository, ICategoryRepository categoryRepository)
+        public ProductController(ISanPhamRepository productRepository, ICategoryRepository categoryRepository, INhaPhanPhoiRepository nhaPhanPhoiRepository, IChungNhanRepository chungNhanRepository)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
+            _nhaPhanPhoiRepository = nhaPhanPhoiRepository;
+            _chungNhanRepository = chungNhanRepository;
         }
 
         // Hiển thị danh sách sản phẩm
@@ -24,7 +28,11 @@ namespace WebApp.Areas.Admin.Controllers
         {
             var productList = await _productRepository.GetAllAsync();
             var categories = await _categoryRepository.GetAllAsync();
+            var nhaPhanPhois = await _nhaPhanPhoiRepository.GetAllAsync();
+            var chungNhans = await _chungNhanRepository.GetAllAsync();
             ViewBag.Categories = new SelectList(categories, "Idcategory", "NameCategory");
+            ViewBag.nhaPhanPhois = new SelectList(nhaPhanPhois, "Idnpp", "TenNpp");
+            ViewBag.chungNhans = new SelectList(chungNhans, "IdchungNhan", "HinhAnhChungNhan");
             return View(productList);
         }
 
@@ -33,7 +41,11 @@ namespace WebApp.Areas.Admin.Controllers
         public async Task<IActionResult> AddAsync()
         {
             var categories = await _categoryRepository.GetAllAsync();
+            var nhaPhanPhois = await _nhaPhanPhoiRepository.GetAllAsync();
+            var chungNhans = await _chungNhanRepository.GetAllAsync();
             ViewBag.Categories = new SelectList(categories, "Idcategory", "NameCategory");
+            ViewBag.nhaPhanPhois = new SelectList(nhaPhanPhois, "Idnpp", "TenNpp");
+            ViewBag.chungNhans = new SelectList(chungNhans, "IdchungNhan", "IdchungNhan");
             return View();
         }
 
@@ -44,6 +56,9 @@ namespace WebApp.Areas.Admin.Controllers
         {
             product.Idsp = Guid.NewGuid().ToString();
             ModelState.Remove("Idsp");
+            ModelState.Remove("IdcategoryNavigation");
+            ModelState.Remove("IdchungNhanNavigation");
+            ModelState.Remove("IdnppNavigation");
             if (ModelState.IsValid)
             {
                 if (HinhAnhSp is not null)
@@ -56,7 +71,11 @@ namespace WebApp.Areas.Admin.Controllers
             }
             // Nếu ModelState không hợp lệ, hiển thị form với dữ liệu đã nhập
             var categories = await _categoryRepository.GetAllAsync();
+            var nhaPhanPhois = await _nhaPhanPhoiRepository.GetAllAsync();
+            var chungNhans = await _chungNhanRepository.GetAllAsync();
             ViewBag.Categories = new SelectList(categories, "Idcategory", "NameCategory");
+            ViewBag.nhaPhanPhois = new SelectList(nhaPhanPhois, "Idnpp", "TenNpp");
+            ViewBag.chungNhans = new SelectList(chungNhans, "IdchungNhan", "IdchungNhan");
             return View(product);
         }
         //Xử lý lưu đường dẫn hình ảnh
@@ -90,7 +109,11 @@ namespace WebApp.Areas.Admin.Controllers
                 return NotFound();
             }
             var categories = await _categoryRepository.GetAllAsync();
+            var nhaPhanPhois = await _nhaPhanPhoiRepository.GetAllAsync();
+            var chungNhans = await _chungNhanRepository.GetAllAsync();
             ViewBag.Categories = new SelectList(categories, "Idcategory", "NameCategory");
+            ViewBag.nhaPhanPhois = new SelectList(nhaPhanPhois, "Idnpp", "TenNpp");
+            ViewBag.chungNhans = new SelectList(chungNhans, "IdchungNhan", "HinhAnhChungNhan");
             return View(product);
         }
 
@@ -105,31 +128,43 @@ namespace WebApp.Areas.Admin.Controllers
             }
 
             var categories = await _categoryRepository.GetAllAsync();
-            ViewBag.Categories = new SelectList(categories, "Idcategory", "NameCategory", product.Idcategory);
+            var nhaPhanPhois = await _nhaPhanPhoiRepository.GetAllAsync();
+            var chungNhans = await _chungNhanRepository.GetAllAsync();
+            ViewBag.Categories = new SelectList(categories, "Idcategory", "NameCategory");
+            ViewBag.nhaPhanPhois = new SelectList(nhaPhanPhois, "Idnpp", "TenNpp");
+            ViewBag.chungNhans = new SelectList(chungNhans, "IdchungNhan", "IdchungNhan");
             return View(product);
         }
 
         // Xử lý cập nhật sản phẩm
         
         [HttpPost]
-        public async Task<IActionResult> Update(string id, SanPham product, IFormFile image)
-        {
+        public async Task<IActionResult> Update(string id, SanPham product, IFormFile HinhAnhSp)
+         {
             if (id != product.Idsp)
             {
                 return BadRequest();
             }
+            ModelState.Remove("Idsp");
+            ModelState.Remove("IdcategoryNavigation");
+            ModelState.Remove("IdchungNhanNavigation");
+            ModelState.Remove("IdnppNavigation");
             if (ModelState.IsValid)
             {
-                if (image is not null)
+                if (HinhAnhSp is not null)
                 {
                     // Lưu hình ảnh sản phẩm
-                    product.HinhAnhSp = await SaveImage(image);
+                    product.HinhAnhSp = await SaveImage(HinhAnhSp);
                 }
                 await _productRepository.UpdateAsync(product);
                 return RedirectToAction(nameof(Index));
             }
             var categories = await _categoryRepository.GetAllAsync();
+            var nhaPhanPhois = await _nhaPhanPhoiRepository.GetAllAsync();
+            var chungNhans = await _chungNhanRepository.GetAllAsync();
             ViewBag.Categories = new SelectList(categories, "Idcategory", "NameCategory");
+            ViewBag.nhaPhanPhois = new SelectList(nhaPhanPhois, "Idnpp", "TenNpp");
+            ViewBag.chungNhans = new SelectList(chungNhans, "IdchungNhan", "IdchungNhan");
             return View(product);
         }
 
@@ -142,10 +177,18 @@ namespace WebApp.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            //Lọc ra category ứng với sán phẩm
+            //Lọc ra thông tin liên quan ứng với sán phẩm
             var categories = await _categoryRepository.GetAllAsync();
             var selectedCategory = categories.FirstOrDefault(c => c.Idcategory == product.Idcategory);
             ViewBag.CategoryName = selectedCategory?.NameCategory;
+
+            var nhaPhanPhois = await _nhaPhanPhoiRepository.GetAllAsync();
+            var selectedNhaPhanPhoi = nhaPhanPhois.FirstOrDefault(c => c.Idnpp == product.Idnpp);
+            ViewBag.NhaPhanPhoiName = selectedNhaPhanPhoi?.TenNpp;
+
+            var chungNhans = await _chungNhanRepository.GetAllAsync();
+            var selectedChungNhan = chungNhans.FirstOrDefault(c => c.IdchungNhan == product.IdchungNhan);
+            ViewBag.ChungNhanImg = selectedChungNhan?.HinhAnhChungNhan;
             return View(product);
         }
 

@@ -23,6 +23,7 @@ namespace WebApp.Data
         public virtual DbSet<NhaPhanPhoi> NhaPhanPhois { get; set; } = null!;
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
         public virtual DbSet<SanPham> SanPhams { get; set; } = null!;
+        public virtual DbSet<Order> Orders { get; set; } = null!;
         public virtual DbSet<ThongTinLienHe> ThongTinLienHes { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -90,31 +91,48 @@ namespace WebApp.Data
 
                 entity.Property(e => e.OrderDetailId).HasColumnName("OrderDetailID");
 
-                entity.Property(e => e.DcgiaoHang).HasColumnName("DCGiaoHang");
-
                 entity.Property(e => e.Idsp)
                     .HasMaxLength(450)
                     .HasColumnName("IDSp");
 
-                entity.Property(e => e.OrderTime).HasColumnType("datetime");
-
-                entity.Property(e => e.Phone)
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.TotalPrice)
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.UserId)
+                entity.Property(e => e.OrderId)
                     .HasMaxLength(450)
-                    .HasColumnName("UserID");
+                    .HasColumnName("OrderId");
 
                 entity.HasOne(d => d.IdspNavigation)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.Idsp)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Tb.OrderDetail_Tb.SanPham");
+
+                entity.HasOne(d => d.OrderIdNavigation)
+                    .WithMany(p => p.OrderDetails)
+                    .HasForeignKey(d => d.OrderId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Tb.OrderDetail_Tb.Order");
+            });
+
+            //Thêm model Order
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.ToTable("Order");
+
+                entity.Property(e => e.OrderId).HasColumnName("OrderId");
+
+                entity.Property(e => e.OrderTime).HasColumnType("datetime");
+
+                entity.Property(e => e.DcGiaoHang)
+                    .HasMaxLength(450)
+                    .HasColumnName("DcGiaoHang");
+
+                entity.Property(e => e.TotalPrice)
+                    .HasColumnType("decimal(18,4)");
+
+                entity.Property(e => e.UserId)
+                    .HasMaxLength(450)
+                    .HasColumnName("UserID");
+
+                entity.Property(e => e.Message).HasColumnName("Message");
             });
 
             modelBuilder.Entity<SanPham>(entity =>

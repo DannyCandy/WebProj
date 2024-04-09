@@ -5,6 +5,8 @@
 @model WebApp.Models.SanPham
 @{
     SelectList categories = ViewBag.Categories;
+    SelectList nhaPhanPhois = ViewBag.nhaPhanPhois;
+    SelectList chungNhans = ViewBag.chungNhans;
 }
 <h2>Product Details</h2>
  
@@ -15,6 +17,7 @@
     <h4 class="mt-2">Congdung: @Model.CongDung</h4>
     <h4 class="mt-2">TPDD: @Model.ThanhPhanDinhDuong</h4>
     <h4 class="mt-2">HDSD: @Model.Hdsd</h4>
+    <h4 class="mt-2">SoLuong: @Model.SoLuongSp</h4>
     <h4 class="mt-2">Category: 
         @{
             string? categoryName = categories
@@ -25,7 +28,29 @@
         }
         @categoryName
     </h4>
-
+    <h4 class="mt-2">NhaPhanPhoi: 
+        @{
+            string? nhaPhanPhoiName = nhaPhanPhois
+            .Cast<SelectListItem>()
+            .Where(item => item.Value == Model.Idnpp)
+            .Select(item => item.Text)
+            .FirstOrDefault();
+        }
+        @nhaPhanPhoiName
+    </h4>
+    <h4 class="mt-2">ChungNhan:</h4>
+    @{
+        string? chungNhanImg = chungNhans
+        .Cast<SelectListItem>()
+        .Where(item => item.Value == Model.IdchungNhan)
+        .Select(item => item.Text)
+        .FirstOrDefault();
+    }
+    @if (chungNhanImg is not null)
+    {
+        <img src="@chungNhanImg" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
+    }
+    <h4 class="mt-2">HinhAnhSP</h4>
     @if (Model.HinhAnhSp is not null)
     {
         <img src="@Model.HinhAnhSp" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />

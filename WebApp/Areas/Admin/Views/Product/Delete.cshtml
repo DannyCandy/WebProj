@@ -12,8 +12,16 @@
         <h4 class="mt-2">Congdung: @Model.CongDung</h4>
         <h4 class="mt-2">TPDD: @Model.ThanhPhanDinhDuong</h4>
         <h4 class="mt-2">HDSD: @Model.Hdsd</h4>
+        <h4 class="mt-2">SoLuong: @Model.SoLuongSp</h4>
         <h4 class="mt-2">Category: @ViewBag.CategoryName</h4>
+        <h4 class="mt-2">NhaPhanPhoi: @ViewBag.NhaPhanPhoiName</h4>
+        <h4 class="mt-2">ChungNhan:</h4>
 
+        @if (ViewBag.ChungNhanImg is not null)
+        {
+        <img src="ViewBag.ChungNhanImg" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
+        }
+        <h4 class="mt-2">HinhAnhSp:</h4>
         @if (Model.HinhAnhSp is not null)
         {
             <img src="@Model.HinhAnhSp" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />

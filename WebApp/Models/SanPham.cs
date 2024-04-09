@@ -17,7 +17,7 @@ namespace WebApp.Models
         public string ThanhPhanDinhDuong { get; set; } = null!;
         public string Hdsd { get; set; } = null!;
         public int SoLuongSp { get; set; } 
-        public string HinhAnhSp { get; set; } = null!;
+        public string? HinhAnhSp { get; set; } = null!;
         public string IdchungNhan { get; set; } = null!;
         public string Idcategory { get; set; } = null!;
         public string Idnpp { get; set; } = null!;

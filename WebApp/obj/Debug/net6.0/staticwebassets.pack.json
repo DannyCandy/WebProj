@@ -61,8 +61,20 @@
       "PackagePath": "staticwebassets\\images\\ChungNhanImg\\Screenshot 2023-08-06 223519.png"
     },
     {
+      "Id": "D:\\TempProj\\WebApp\\wwwroot\\images\\NppImg\\Screenshot 2023-06-20 154417.png",
+      "PackagePath": "staticwebassets\\images\\NppImg\\Screenshot 2023-06-20 154417.png"
+    },
+    {
       "Id": "D:\\TempProj\\WebApp\\wwwroot\\images\\NppImg\\Screenshot 2023-08-06 223519.png",
       "PackagePath": "staticwebassets\\images\\NppImg\\Screenshot 2023-08-06 223519.png"
+    },
+    {
+      "Id": "D:\\TempProj\\WebApp\\wwwroot\\images\\NppImg\\revealFaceThailandGirl.jpg",
+      "PackagePath": "staticwebassets\\images\\NppImg\\revealFaceThailandGirl.jpg"
+    },
+    {
+      "Id": "D:\\TempProj\\WebApp\\wwwroot\\images\\ProductImg\\Screenshot 2023-06-20 154417.png",
+      "PackagePath": "staticwebassets\\images\\ProductImg\\Screenshot 2023-06-20 154417.png"
     },
     {
       "Id": "D:\\TempProj\\WebApp\\wwwroot\\js\\site.js",

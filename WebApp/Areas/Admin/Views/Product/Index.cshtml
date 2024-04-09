@@ -10,6 +10,8 @@
 }
 @{
     SelectList categories = ViewBag.Categories;
+    SelectList nhaPhanPhois = ViewBag.nhaPhanPhois;
+    SelectList chungNhans = ViewBag.chungNhans;
 }
 <table class="table mt-2 table-hover">
     <thead class="table-dark">
@@ -20,7 +22,10 @@
             <th>CongDung</th>
             <th>ThanhPhanDinhDuong</th>
             <th>Hdsd</th>
+            <th>SoLuong</th>
             <th>Category</th>
+            <th>NhaPhanPhoi</th>
+            <th>ChungNhan</th>
             <th>Image</th>
             <th>Actions</th>
         </tr>
@@ -36,6 +41,7 @@
                 <td>@product.CongDung</td>
                 <td>@product.ThanhPhanDinhDuong</td>
                 <td>@product.Hdsd</td>
+                <td>@product.SoLuongSp</td>
                 <td>
                     @{
                         string? categoryName = categories
@@ -47,9 +53,32 @@
                     @categoryName
                 </td>
                 <td>
+                    @{
+                        string? nhaPhanPhoiName = nhaPhanPhois
+                        .Cast<SelectListItem>()
+                        .Where(item => item.Value == product.Idnpp)
+                        .Select(item => item.Text)
+                        .FirstOrDefault();
+                    }
+                    @nhaPhanPhoiName
+                </td>
+                <td>
+                    @{
+                        string? chungNhanImg = chungNhans
+                        .Cast<SelectListItem>()
+                        .Where(item => item.Value == product.IdchungNhan)
+                        .Select(item => item.Text)
+                        .FirstOrDefault();
+                    }
+                    @if (chungNhanImg is not null)
+                    {
+                        <img src="@chungNhanImg" alt="Product Image" class="img-thumbnail mt-2" style="max-width: 100px" />
+                    }
+                </td>
+                <td>
                     @if (product.HinhAnhSp is not null)
                     {
-                        <img src="@product.HinhAnhSp" alt="Product Image" class="img-thumbnail mt-2" style="width: 300px" />
+                        <img src="@product.HinhAnhSp" alt="Product Image" class="img-thumbnail mt-2" style="max-width: 100px" />
                     }
                 </td>
                 <td>

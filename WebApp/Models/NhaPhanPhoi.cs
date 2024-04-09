@@ -12,9 +12,9 @@ namespace WebApp.Models
             SanPhams = new HashSet<SanPham>();
         }
 
-        public string Idnpp { get; set; } 
-        public string TenNpp { get; set; } 
-        public string DiaChiNpp { get; set; }
+        public string Idnpp { get; set; } = null!;
+        public string TenNpp { get; set; } = null!;
+        public string DiaChiNpp { get; set; } = null!;
         [Column(TypeName = "nvarchar(max)")]
         public string? HinhAnhNPP { get; set; } = null!;
         public TimeSpan GioMoCua { get; set; }

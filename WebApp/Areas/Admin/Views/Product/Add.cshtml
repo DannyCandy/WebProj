@@ -47,6 +47,16 @@
         <span asp-validation-for="Idcategory" class="text-danger"></span> <!-- Phản hồi lỗi cho trường CategoryId -->
     </div>
     <div class="form-group">
+        <label asp-for="Idnpp">NhaPhanPhoi</label>
+        <select asp-for="Idnpp" asp-items="@ViewBag.NhaPhanPhois" class="form-control"></select>
+        <span asp-validation-for="Idnpp" class="text-danger"></span> <!-- Phản hồi lỗi cho trường NhaPhanPhoi -->
+    </div>
+    <div class="form-group">
+        <label asp-for="IdchungNhan">ChungNhan</label>
+        <select asp-for="IdchungNhan" asp-items="@ViewBag.ChungNhans" class="form-control"></select>
+        <span asp-validation-for="IdchungNhan" class="text-danger"></span> <!-- Phản hồi lỗi cho trường ChungNhan -->
+    </div>
+    <div class="form-group">
         <label asp-for="SoLuongSp"></label>
         <input asp-for="SoLuongSp" class="form-control" />
         <span asp-validation-for="SoLuongSp" class="text-danger"></span>
