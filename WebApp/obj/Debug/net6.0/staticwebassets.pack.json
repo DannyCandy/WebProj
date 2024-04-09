@@ -37,6 +37,14 @@
       "PackagePath": "staticwebassets\\admin\\js\\scripts.js"
     },
     {
+      "Id": "C:\\Users\\ASUS\\Downloads\\DoAnWebNongSanCT4\\WebProj\\WebApp\\wwwroot\\css\\HTDDHP.css",
+      "PackagePath": "staticwebassets\\css\\HTDDHP.css"
+    },
+    {
+      "Id": "C:\\Users\\ASUS\\Downloads\\DoAnWebNongSanCT4\\WebProj\\WebApp\\wwwroot\\css\\HTPP.css",
+      "PackagePath": "staticwebassets\\css\\HTPP.css"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\Downloads\\DoAnWebNongSanCT4\\WebProj\\WebApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

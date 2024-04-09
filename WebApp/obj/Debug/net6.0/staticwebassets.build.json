@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OcE1EghZESJ4n5yaZyrDJJoIubNUUkPVigjO61DfOS0=",
+  "Hash": "fa9nkxObfWD43PjpsHW1+LhB4zl4emCiu95ps14tMok=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -1205,6 +1205,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\js\\scripts.js"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Downloads\\DoAnWebNongSanCT4\\WebProj\\WebApp\\wwwroot\\css\\HTDDHP.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Downloads\\DoAnWebNongSanCT4\\WebProj\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/HTDDHP.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\HTDDHP.css"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\Downloads\\DoAnWebNongSanCT4\\WebProj\\WebApp\\wwwroot\\css\\HTPP.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\Downloads\\DoAnWebNongSanCT4\\WebProj\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/HTPP.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\HTPP.css"
     },
     {
       "Identity": "C:\\Users\\ASUS\\Downloads\\DoAnWebNongSanCT4\\WebProj\\WebApp\\wwwroot\\css\\site.css",
