@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\css\\Area.css"
     },
     {
+      "Id": "F:\\LTW\\WebProj\\WebApp\\wwwroot\\css\\Category.css",
+      "PackagePath": "staticwebassets\\css\\Category.css"
+    },
+    {
       "Id": "F:\\LTW\\WebProj\\WebApp\\wwwroot\\css\\Detail.css",
       "PackagePath": "staticwebassets\\css\\Detail.css"
     },

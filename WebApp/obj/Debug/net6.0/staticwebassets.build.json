@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0Y2eFQxYgWFRywZLZubAEbSPikkrqM5+2ClUcuzHyI4=",
+  "Hash": "/4mO5M38mJHQqjw8XCNYl+3AB5mod9wkuhNWKcqvqps=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -1383,6 +1383,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Area.css"
+    },
+    {
+      "Identity": "F:\\LTW\\WebProj\\WebApp\\wwwroot\\css\\Category.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\LTW\\WebProj\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/Category.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Category.css"
     },
     {
       "Identity": "F:\\LTW\\WebProj\\WebApp\\wwwroot\\css\\Detail.css",
