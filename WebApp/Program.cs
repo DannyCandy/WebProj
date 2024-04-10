@@ -78,7 +78,7 @@ namespace WebApp
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
-            //Khoi tao role
+            /*//Khoi tao role
             using (var scope = app.Services.CreateScope())
             {
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
@@ -90,7 +90,7 @@ namespace WebApp
                         await roleManager.CreateAsync(new IdentityRole(item));
                     }
                 }
-            }
+            }*/
 
             app.Run();
         }
