@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TempProj\\WebApp\\WebApp.csproj": {}
+    "F:\\LTW\\WebProj\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "D:\\TempProj\\WebApp\\WebApp.csproj": {
+    "F:\\LTW\\WebProj\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TempProj\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "F:\\LTW\\WebProj\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "D:\\TempProj\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\TempProj\\WebApp\\obj\\",
+        "projectPath": "F:\\LTW\\WebProj\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "F:\\LTW\\WebProj\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

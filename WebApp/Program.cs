@@ -82,7 +82,7 @@ namespace WebApp
 
 
             //Khoi tao role
-            using (var scope = app.Services.CreateScope())
+            /*using (var scope = app.Services.CreateScope())
             {
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
                 var roles = new[] { "Admin", "Member" };
@@ -93,7 +93,7 @@ namespace WebApp
                         await roleManager.CreateAsync(new IdentityRole(item));
                     }
                 }
-            }
+            }*/
 
             app.Run();
         }
