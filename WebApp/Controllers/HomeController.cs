@@ -18,6 +18,17 @@ namespace WebApp.Controllers
             return View();
         }
 
+        public IActionResult IndexHeaderandFooter()
+        {
+            return View();
+        }
+
+        public IActionResult IndexContact()
+        {
+            return View();
+        }
+
+      
         public IActionResult Privacy()
         {
             return View();
@@ -28,5 +39,6 @@ namespace WebApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
