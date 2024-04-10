@@ -18,6 +18,14 @@ namespace WebApp.Controllers
             return View();
         }
 
+        public IActionResult IndexHTDDHP()
+        {
+            return View();
+        }
+        public IActionResult IndexHTPP()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
